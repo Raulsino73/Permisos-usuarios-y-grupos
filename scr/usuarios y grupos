@@ -1,0 +1,55 @@
+1.alumno@alumno-HP-ProDesk-600-G5-MT:~$ sudo -s
+[sudo] contraseña para alumno: 
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# adduser pepe
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# adduser maria
+1.2
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# useradd juan
+
+
+1.3
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# addgroup juan
+root@alumno-HP-ProDesk-600-G5-MT:/home# usermod -g juan juan
+
+1.4
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# usermod -p juan juan
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# usermod -p pepe pepe
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# usermod -p maria maria
+
+
+
+
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# cat /etc/passwd
+pepe:x:1001:1001:pepe,,,:/home/pepe:/bin/bash
+maria:x:1002:1003:,,,:/home/maria:/bin/bash
+juan:x:1003:1004::/home/juan:/bin/sh
+
+
+2.
+alumno@alumno-HP-ProDesk-600-G5-MT:~$ cat /etc/passwd
+
+alumno@alumno-HP-ProDesk-600-G5-MT:~$ cat /etc/group
+
+
+3.
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# addgroup contables
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# usermod -g contables pepe
+
+4.
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# usermod -g contables juan
+
+4.2 
+root@alumno-HP-ProDesk-600-G5-MT:/home/alumno# gpasswd contables
+Cambiando la contraseña para el grupo contables
+Nueva contraseña: 
+Vuelva a introducir la nueva contraseña: 
+
+5.1
+alumno@alumno-HP-ProDesk-600-G5-MT:~$ newgrp contables
+Contraseña: 
+5.2
+alumno@alumno-HP-ProDesk-600-G5-MT:~$ cat /etc/group
+contables:x:1005
+5.3
+
+
+
